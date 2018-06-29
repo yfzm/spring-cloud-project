@@ -7,3 +7,14 @@ server:
 spring:
   application:
     name: zipkin-server
+zipkin:
+  storage:
+    type: elasticsearch
+    StorageComponent: elasticsearch
+    elasticsearch:
+      cluster: elasticsearch
+      max-request: 30
+      index: zipkin
+      index-shards: 3
+      index-replicas: 1
+      host: localhost:9200
