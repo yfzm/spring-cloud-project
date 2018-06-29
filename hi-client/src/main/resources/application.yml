@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9317/eureka
+server:
+  port: 8762
+spring:
+  application:
+    name: hi-client
+logging:
+  file: "logs/hi-client.log"
+management:
+  security:
+    enabled: false

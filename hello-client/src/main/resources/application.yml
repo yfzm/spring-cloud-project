@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9317/eureka
+server:
+  port: 8763
+spring:
+  application:
+    name: hello-client
+logging:
+  file: "logs/hello-client.log"
+management:
+  security:
+    enabled: false
