@@ -8,8 +8,10 @@ spring:
 server:
   port: 8769
 turbine:
-  app-config: hi-client, hello-client
+  app-config: hi-client,hello-client
   cluster-name-expression: new Sring("default")
+  aggregator:
+    clusterConfig: default
 management:
   security:
     enabled: false
