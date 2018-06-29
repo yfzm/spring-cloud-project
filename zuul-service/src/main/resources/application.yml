@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9317/eureka
+server:
+  port: 3159
+spring:
+  application:
+    name: zuul-service
+zuul:
+  routes:
+    hiapi:
+      path: /hiapi/**
+      serviceId: feign-hi-client
+    helloapi:
+      path: /helloapi/**
+      serviceId: hello-client
+  prefix: /v1
